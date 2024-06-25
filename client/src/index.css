@@ -1,0 +1,270 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.todo_btn button {
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  /* background-color: #eb5429; */
+  width: 200px;
+  height: 52px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
+.todo_btn button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #507fff;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+  mix-blend-mode: screen;
+}
+
+/* .todo_btn button:hover::before {
+  transform: translate(-50%, -50%) scale(3);
+  opacity: 1;
+}
+
+.todo_btn button:hover {
+  background-color: #ffffff;
+  color: black;
+} */
+
+/* modal */
+.modal {
+  color: black;
+  position: fixed;
+  z-index: 1000;
+  top: -70px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-out;
+  backdrop-filter: blur(5px);
+}
+.modal-content {
+  text-align: center;
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-width: 400px;
+  animation-name: modal-appear;
+  animation-duration: 0.3s;
+  border: 2px solid #eb5429;
+}
+.modal p {
+  width: 300px;
+  padding-top: 6px;
+}
+
+@keyframes modal-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  /* margin-left: -102px; */
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+/*for add-patient*/
+/*body background css*/
+body{
+  padding: 0;
+  margin: 0;
+  background-image: url(./136949.jpg);
+  background-size: cover;
+}
+/*login form css*/
+.form{
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  z-index: 1;
+  max-width: 50%;
+  margin: 200px auto 100px;
+   /* padding: 30px 45px 30px 45px;top right bottom left */
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.483);
+  backdrop-filter: blur(10px); /*Set the background color with transparency*/
+   padding: 60px 30px ; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+  .logo {
+    width: 150px; /* Set your desired width */
+    height: 70px; /* Maintains aspect ratio */
+    margin-bottom: 5px; /* Adds space between the logo and the input fields */
+
+}
+.form input{
+  outline: 0;
+  border-radius: 10px;
+  background: #F2F2F2;
+  width: 100%;
+  border: 0;
+  margin: 10px 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form input:hover{
+  background-color: #D3F8F9;
+  transition: all 1s ease 0s;
+}
+.form input:focus{
+  background-color: #D3F8F9;
+  transition: all 1s ease 0s;
+}
+.form button{
+  text-transform: uppercase;
+  outline: 0;
+  border-radius: 10px;
+  background: #2c62c0;
+  width: 200px;
+  border: 0;
+  margin-top: 10px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+}
+.form button:hover, .form button:active, .form button:focus{
+  background-color: #06C5CF;
+  transition: all 1s ease 0s;
+}
+.form .message{
+  margin: 15px 0 0;
+  color: #B3B3B3;
+  font-size: 12px;
+}
+.form .message a{
+  color: #06C5CF;
+  text-decoration: none;
+}
+.input-row {
+  display: flex;
+  justify-content: space-between;
+}
+.input-field {
+  flex: 1;
+  margin: 0 5px;
+}
+.input-field input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+/* view */
+.form-view{
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  z-index: 1;
+  max-width: 50%;
+  margin: 200px auto 100px;
+   /* padding: 5px ;top right bottom left */
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.316);
+  backdrop-filter: blur(10px); /*Set the background color with transparency*/
+    padding:  auto ;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-view input{
+  outline: 0;
+  border-radius: 10px;
+  background: #F2F2F2;
+  width: 100%;
+  border: 5px;
+  margin: 5px 0 5px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form-view input:hover{
+  background-color: #D3F8F9;
+  transition: all 1s ease 0s;
+}
+.form-view input:focus{
+  background-color: #D3F8F9;
+  transition: all 1s ease 0s;
+}
+.form-view button{
+  text-transform: uppercase;
+  outline: 0;
+  border-radius: 10px;
+  background: #2c62c0;
+  width: 300px;
+  border: 0;
+  margin-top: 5px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+}
+.form-view button:hover, .form-view button:active, .form-view button:focus{
+  background-color: #06C5CF;
+  transition: all 1s ease 0s;
+}
+/* wallet */
+.form-wallet{
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  z-index: 1;
+  max-width: 50%;
+  margin: 330px auto 100px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.316);
+  backdrop-filter: blur(10px); 
+    padding:  auto ;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-wallet p{
+  padding: 10px;
+  
+  font-weight: bolder;
+  font-size: 25px;
+}
+.form-wallet button{
+  padding:10px 10px 10px 10px;
+  font-size: 20px;
+  margin: 20px 20px;
+}
